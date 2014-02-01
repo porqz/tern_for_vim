@@ -214,12 +214,12 @@ def tern_sendBufferIfDirty():
 
 def tern_asCompletionIcon(type):
   if type is None or type == "?": return "(?)"
-  if type.startswith("fn("): return "(fn)"
+  if type.startswith("fn("): return "(function)"
   if type.startswith("["): return "([])"
-  if type == "number": return "(num)"
-  if type == "string": return "(str)"
-  if type == "bool": return "(bool)"
-  return "(obj)"
+  if type == "number": return "(number)"
+  if type == "string": return "(string)"
+  if type == "bool": return "(boolean)"
+  return "(object)"
 
 def tern_ensureCompletionCached():
   cached = vim.eval("b:ternLastCompletionPos")
