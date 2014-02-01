@@ -11,7 +11,8 @@ from itertools import groupby
 opener = urllib2.build_opener(urllib2.ProxyHandler({}))
 
 def tern_displayError(err):
-  vim.command("echo " + json.dumps(str(err)))
+  error_text = json.dumps(str(err))
+  vim.command("echo ''")
 
 def tern_makeRequest(port, doc):
   try:
